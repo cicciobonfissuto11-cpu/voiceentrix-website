@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Arial,sans-serif;max-width:800px;margin:0 auto;padding:20px;font-size:13px}
+    .header{text-align:center;border-bottom:2px solid #8B0000;padding-bottom:15px;margin-bottom:20px}
+    .restaurant-row{display:flex;justify-content:space-between;font-size:11px;margin-bottom:10px}
+    .title{font-size:38px;color:#8B0000;margin:10px 0;font-family:Georgia,serif}
+    .subtitle{color:#666;margin-bottom:10px}
+    .intro{font-size:11px;color:#555;margin-bottom:15px;line-height:1.4}
+    .prices{display:flex;justify-content:center;gap:30px;margin:15px 0}
+    .price{font-weight:bold}
+    .price span{color:#8B0000}
+    .menu-note{font-size:11px;color:#8B0000;text-transform:uppercase;margin:10px 0}
+    .menu-note .gold{color:#DAA520}
+    .day{margin-bottom:18px;page-break-inside:avoid}
+    .day-title{font-size:15px;text-decoration:underline;text-align:center;margin-bottom:8px;font-family:Georgia,serif}
+    .menu{margin-bottom:6px;text-align:center}
+    .label{color:#8B0000;font-weight:bold}
+    .name{font-weight:bold}
+    .desc{font-size:11px;color:#555}
+    .footer{margin-top:25px;text-align:center;font-size:10px;color:#888;border-top:1px solid #ddd;padding-top:12px}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="restaurant-row">
+      <div><b>Italienisch-mediterrane Spezialitäten</b><br>Restaurant 'Ristorante–Pizzeria Casa da Leone'<br>Telefon 06182 – 78 350 78</div>
+      <div style="text-align:right"><b>Ausgewählter internationaler Genuss</b><br>Ernst-Ludwig-Straße 1, 63512 Hainburg<br>info@casa-da-leone.de</div>
+    </div>
+    <h1 class="title">Mittagstisch</h1>
+    <p class="subtitle">Werktags von Montag bis Freitag</p>
+    <p class="intro">Werktags von 11:30 bis 14:30 Uhr (Bestellschluss ist um 14:00 Uhr) freuen wir uns auf Ihren Besuch im Restaurant Casa da Leone und bieten Ihnen in dieser Zeit zusätzlich zu unserer normalen Speisenkarte leckere 3-Gang Mittags-Menüs zu einem äußerst günstigen Preis an.</p>
+    <div class="prices">
+      <div class="price"><span>Menü 1:</span> 12,90 €</div>
+      <div class="price"><span>Menü 2:</span> 15,90 €</div>
+      <div class="price"><span>Menü 3:</span> 23,90 €</div>
+    </div>
+    <p class="menu-note">DER ERSTE GANG IST EINE <span class="gold">SUPPE</span> GEFOLGT VOM GEWÄHLTEN <span>HAUPTGERICHT</span><br>UND ZUM SCHLUSS EIN <span>ÜBERRASCHUNGS-DESSERT</span></p>
+  </div>
+
+  <div class="day">
+    <h2 class="day-title">Montag, 5. Januar 2026</h2>
+    <div class="menu"><span class="label">Menü 1:</span> <span class="name">Linguine mit Flusskrebsen.</span> <span class="desc">Bandnudeln mit Flusskrebsen in feiner Weißweinsoße</span></div>
+    <div class="menu"><span class="label">Menü 2:</span> <span class="name">Wiener Schnitzel.</span> <span class="desc">Goldbraun paniertes Schnitzel nach Wiener Art mit Pommes</span></div>
+    <div class="menu"><span class="label">Menü 3:</span> <span class="name">Lammfilet in Barolo-Rotweinsoße.</span> <span class="desc">Zartes Lammfilet in kräftiger Barolo-Rotweinsoße, dazu Rosmarinkartoffeln und buntem Gemüse</span></div>
+  </div>
+  <div class="day">
+    <h2 class="day-title">Dienstag, 6. Januar 2026</h2>
+    <div class="menu"><span class="label">Menü 1:</span> <span class="name">Italienischer Salat.</span> <span class="desc">Bunter Salat mit italienischen Spezialitäten</span></div>
+    <div class="menu"><span class="label">Menü 2:</span> <span class="name">Scaloppina Gorgonzola.</span> <span class="desc">Kalbsschnitzel in cremiger Gorgonzolasoße mit Rosmarinkartoffeln</span></div>
+    <div class="menu"><span class="label">Menü 3:</span> <span class="name">Lammfilet in Barolo-Rotweinsoße.</span> <span class="desc">Zartes Lammfilet in kräftiger Barolo-Rotweinsoße, dazu Rosmarinkartoffeln und buntem Gemüse</span></div>
+  </div>
+  <div class="day">
+    <h2 class="day-title">Mittwoch, 7. Januar 2026</h2>
+    <div class="menu"><span class="label">Menü 1:</span> <span class="name">Gnocchi Porcini.</span> <span class="desc">Kartoffelnudeln mit Steinpilzen in Buttersoße</span></div>
+    <div class="menu"><span class="label">Menü 2:</span> <span class="name">Argentinisches Rumpsteak Vino Rosso.</span> <span class="desc">Rumpsteak an Barolo-Rotweinsoße mit Rosmarinkartoffeln</span></div>
+    <div class="menu"><span class="label">Menü 3:</span> <span class="name">Lammfilet in Barolo-Rotweinsoße.</span> <span class="desc">Zartes Lammfilet in kräftiger Barolo-Rotweinsoße, dazu Rosmarinkartoffeln und buntem Gemüse</span></div>
+  </div>
+  <div class="day">
+    <h2 class="day-title">Donnerstag, 8. Januar 2026</h2>
+    <div class="menu"><span class="label">Menü 1:</span> <span class="name">Pizza Toscana.</span> <span class="desc">Mit Salami Peperoniwurst Kochschinken Sardellen und Oliven</span></div>
+    <div class="menu"><span class="label">Menü 2:</span> <span class="name">Lachsfilet Madagaskar.</span> <span class="desc">Gegrillter Lachs an Pfefferrahmsoße mit Rosmarinkartoffeln</span></div>
+    <div class="menu"><span class="label">Menü 3:</span> <span class="name">Lammfilet in Barolo-Rotweinsoße.</span> <span class="desc">Zartes Lammfilet in kräftiger Barolo-Rotweinsoße, dazu Rosmarinkartoffeln und buntem Gemüse</span></div>
+  </div>
+  <div class="day">
+    <h2 class="day-title">Freitag, 9. Januar 2026</h2>
+    <div class="menu"><span class="label">Menü 1:</span> <span class="name">Tortelloni Spirito.</span> <span class="desc">Frische Nudeltaschen in würziger Tomatensoße</span></div>
+    <div class="menu"><span class="label">Menü 2:</span> <span class="name">Steinbuttfilet Hummersoße.</span> <span class="desc">Steinbutt an feiner Hummersoße mit Petersilienkartoffeln und Spinat</span></div>
+    <div class="menu"><span class="label">Menü 3:</span> <span class="name">Lammfilet in Barolo-Rotweinsoße.</span> <span class="desc">Zartes Lammfilet in kräftiger Barolo-Rotweinsoße, dazu Rosmarinkartoffeln und buntem Gemüse</span></div>
+  </div>
+
+  <div class="footer">
+    <p>Bezüglich Allergenen, Inhalts- und Zusatzstoffen informiert Sie auf Nachfrage unser Personal</p>
+    <p style="font-style:italic;margin-top:8px">Wir wünschen Ihnen einen angenehmen Aufenthalt und einen besonders 'Guten Appetit'</p>
+  </div>
+</body>
+</html>
