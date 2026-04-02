@@ -13,6 +13,9 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://voiceentrix.ai/en/"/>
     <changefreq>monthly</changefreq><priority>1.0</priority>
   </url>
+  <url><loc>https://voiceentrix.ai/de/blog/mittagstisch-automatisieren/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://voiceentrix.ai/de/blog/ki-automatisierung-gastronomie/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://voiceentrix.ai/de/blog/prozessautomatisierung-unternehmen/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://voiceentrix.ai/de/datenschutz/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://voiceentrix.ai/en/privacy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
