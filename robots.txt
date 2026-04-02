@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /de/
+Allow: /en/
+Disallow: /
+
+Sitemap: https://voiceentrix.ai/sitemap.xml

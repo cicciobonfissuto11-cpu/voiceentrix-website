@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+  <rect width="1200" height="420" fill="#F7F5FF"/>
+  <rect x="60" y="120" width="180" height="180" rx="28" fill="#7C3AED"/>
+  <polygon points="82,154 106,154 162,278 138,278" fill="#FFFFFF"/>
+  <polygon points="218,154 194,154 162,278 138,278" fill="#EDE9FE"/>
+  <path d="M218,154 L194,154" stroke="#F5F3FF" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="150" cy="278" r="4" fill="#C4B5FD"/>
+  <line x1="288" y1="132" x2="288" y2="288" stroke="#C4B5FD" stroke-width="1"/>
+  <text x="330" y="240" font-family="Georgia,serif" font-size="90" font-weight="bold"
+    fill="#0F172A" dominant-baseline="middle">Voiceentrix</text>
+  <text x="350" y="280" font-family="Arial,sans-serif" font-size="26"
+    fill="#7C3AED" dominant-baseline="hanging">AI &amp; Automation</text>
+</svg>
