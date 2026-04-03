@@ -112,9 +112,12 @@
 
     /* HERO */
     .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 140px 40px 100px; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; top: -20%; right: -10%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 65%); pointer-events: none; animation: blobFloat 12s ease-in-out infinite; }
-    .hero::after { content: ''; position: absolute; bottom: -10%; left: -5%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 65%); pointer-events: none; animation: blobFloat 15s ease-in-out infinite reverse; }
-    @keyframes blobFloat { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(30px,-30px) scale(1.05)} }
+    .hero::before { display: none; }
+    .hero::after { display: none; }
+    #gradient-canvas {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      z-index: 0; opacity: 0.85;
+    }
     .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
     .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--border); border-radius: 100px; padding: 7px 16px; margin-bottom: 40px; font-size: 12px; font-weight: 600; color: var(--purple-light); letter-spacing: 0.08em; text-transform: uppercase; background: var(--purple-dim); opacity: 0; animation: fadeUp 0.8s 0.1s forwards; }
     .eyebrow-dot { width: 6px; height: 6px; background: var(--purple-light); border-radius: 50%; animation: pulse 2s infinite; }
@@ -344,6 +347,7 @@
 
 <!-- HERO -->
 <section class="hero">
+  <canvas id="gradient-canvas"></canvas>
   <div class="hero-inner">
     <div class="hero-eyebrow">
       <div class="eyebrow-dot"></div>
@@ -717,7 +721,36 @@
 </footer>
 
 <script>
-  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+  // Gradient Mesh Animation
+  const canvas = document.getElementById('gradient-canvas');
+  const ctx = canvas.getContext('2d');
+  function resize() { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  const points = [
+    { x: 0.2, y: 0.2, vx: 0.0003, vy: 0.0002, color: '124,58,237' },
+    { x: 0.8, y: 0.1, vx: -0.0002, vy: 0.0003, color: '59,130,246' },
+    { x: 0.6, y: 0.7, vx: 0.0002, vy: -0.0003, color: '124,58,237' },
+    { x: 0.1, y: 0.8, vx: 0.0003, vy: -0.0002, color: '99,102,241' },
+    { x: 0.9, y: 0.6, vx: -0.0003, vy: 0.0002, color: '59,130,246' },
+  ];
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#0f0f1c';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    points.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > 1) p.vx *= -1;
+      if (p.y < 0 || p.y > 1) p.vy *= -1;
+      const grd = ctx.createRadialGradient(p.x * canvas.width, p.y * canvas.height, 0, p.x * canvas.width, p.y * canvas.height, canvas.width * 0.55);
+      grd.addColorStop(0, `rgba(${p.color}, 0.18)`);
+      grd.addColorStop(1, `rgba(${p.color}, 0)`);
+      ctx.fillStyle = grd;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
   function handleSubmit(e) {
     e.preventDefault();
     var name = document.getElementById('name').value;
