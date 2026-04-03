@@ -722,35 +722,42 @@
 
 <script>
   // Gradient Mesh Animation
-  const canvas = document.getElementById('gradient-canvas');
-  const ctx = canvas.getContext('2d');
-  function resize() { canvas.width = canvas.offsetWidth; canvas.height = canvas.offsetHeight; }
-  resize();
-  window.addEventListener('resize', resize);
-  const points = [
-    { x: 0.2, y: 0.2, vx: 0.0003, vy: 0.0002, color: '124,58,237' },
-    { x: 0.8, y: 0.1, vx: -0.0002, vy: 0.0003, color: '59,130,246' },
-    { x: 0.6, y: 0.7, vx: 0.0002, vy: -0.0003, color: '124,58,237' },
-    { x: 0.1, y: 0.8, vx: 0.0003, vy: -0.0002, color: '99,102,241' },
-    { x: 0.9, y: 0.6, vx: -0.0003, vy: 0.0002, color: '59,130,246' },
-  ];
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#0f0f1c';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    points.forEach(p => {
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > 1) p.vx *= -1;
-      if (p.y < 0 || p.y > 1) p.vy *= -1;
-      const grd = ctx.createRadialGradient(p.x * canvas.width, p.y * canvas.height, 0, p.x * canvas.width, p.y * canvas.height, canvas.width * 0.55);
-      grd.addColorStop(0, `rgba(${p.color}, 0.18)`);
-      grd.addColorStop(1, `rgba(${p.color}, 0)`);
-      ctx.fillStyle = grd;
+  window.addEventListener('load', function() {
+    const canvas = document.getElementById('gradient-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    function resize() {
+      canvas.width = canvas.parentElement.offsetWidth;
+      canvas.height = canvas.parentElement.offsetHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+    const points = [
+      { x: 0.2, y: 0.2, vx: 0.0003, vy: 0.0002, color: '124,58,237' },
+      { x: 0.8, y: 0.1, vx: -0.0002, vy: 0.0003, color: '59,130,246' },
+      { x: 0.6, y: 0.7, vx: 0.0002, vy: -0.0003, color: '124,58,237' },
+      { x: 0.1, y: 0.8, vx: 0.0003, vy: -0.0002, color: '99,102,241' },
+      { x: 0.9, y: 0.6, vx: -0.0003, vy: 0.0002, color: '59,130,246' },
+    ];
+    function draw() {
+      if (canvas.width === 0) resize();
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = '#0f0f1c';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-    });
-    requestAnimationFrame(draw);
-  }
-  draw();
+      points.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > 1) p.vx *= -1;
+        if (p.y < 0 || p.y > 1) p.vy *= -1;
+        const grd = ctx.createRadialGradient(p.x * canvas.width, p.y * canvas.height, 0, p.x * canvas.width, p.y * canvas.height, canvas.width * 0.55);
+        grd.addColorStop(0, `rgba(${p.color}, 0.2)`);
+        grd.addColorStop(1, `rgba(${p.color}, 0)`);
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      });
+      requestAnimationFrame(draw);
+    }
+    draw();
+  });
 
   function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
 
