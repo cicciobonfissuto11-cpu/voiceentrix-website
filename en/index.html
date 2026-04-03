@@ -751,6 +751,9 @@
     requestAnimationFrame(draw);
   }
   draw();
+
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+
   function handleSubmit(e) {
     e.preventDefault();
     var name = document.getElementById('name').value;
