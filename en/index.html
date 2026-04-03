@@ -130,11 +130,7 @@
     .btn-primary:hover { background: var(--purple-light); transform: translateY(-2px); box-shadow: 0 0 40px var(--purple-glow); }
     .btn-ghost { color: var(--text-muted); font-size: 15px; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: color 0.2s; padding: 15px 0; }
     .btn-ghost:hover { color: var(--white); }
-    .hero-stats { display: flex; gap: 48px; margin-top: 72px; flex-wrap: wrap; padding-top: 48px; border-top: 1px solid var(--border); opacity: 0; animation: fadeUp 0.9s 0.7s forwards; }
-    .stat-n { font-family: 'ClashDisplay', 'DM Sans', sans-serif; font-weight: 800; font-size: 36px; color: var(--white); letter-spacing: -0.04em; line-height: 1; }
-    .stat-n span { color: var(--purple-light); }
-    .stat-l { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
-    @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
 
     /* PARTNERS */
     .partners { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 44px 40px; background: var(--bg-2); }
@@ -295,8 +291,7 @@
       .hamburger { display: flex; }
       .hero { padding: 120px 20px 80px; }
       .hero h1 { font-size: 42px; }
-      .hero-stats { gap: 32px; }
-      .section-wrap, .spotlight-wrap, .pricing-wrap, .contact-wrap, .blog-wrap, .legal-wrap { padding-left: 20px; padding-right: 20px; }
+.section-wrap, .spotlight-wrap, .pricing-wrap, .contact-wrap, .blog-wrap, .legal-wrap { padding-left: 20px; padding-right: 20px; }
       .services-grid { grid-template-columns: 1fr; }
       .service-card { border-right: none !important; }
       .pricing-grid { grid-template-columns: 1fr; }
@@ -358,26 +353,7 @@
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Request Demo →</a>
       <a href="#product" class="btn-ghost">See our first product ↓</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-n">100<span>%</span></div>
-        <div class="stat-l">Fully automated</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-n">3<span>h</span></div>
-        <div class="stat-l">Saved per week</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-n">14</div>
-        <div class="stat-l">Days free trial</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-n">48<span>h</span></div>
-        <div class="stat-l">Setup time</div>
-      </div>
-    </div>
-  </div>
+    </div></div>
 </section>
 
 <!-- TECH PARTNERS -->
@@ -524,14 +500,14 @@
     <div class="how-grid">
       <div class="how-card reveal reveal-delay-1">
         <div class="how-num">01</div>
-        <h3>Set up</h3>
-        <p>Share your regular dishes, restaurant design and mailing list with us. We set up the automation once — typically within 48 hours.</p>
+        <h3>Enter your dishes</h3>
+        <p>Enter your regular dishes directly in the dashboard — one by one or via file upload. Your restaurant design and mailing list are stored once.</p>
         <div class="how-arrow">→</div>
       </div>
       <div class="how-card reveal reveal-delay-2">
         <div class="how-num">02</div>
-        <h3>AI takes over</h3>
-        <p>Every Monday the AI automatically generates the weekly plan and creates a print-ready PDF menu — matching your corporate design.</p>
+        <h3>AI creates the weekly plan</h3>
+        <p>Every Monday the AI automatically generates a weekly plan from your dishes and creates a print-ready PDF menu — in your corporate design.</p>
         <div class="how-arrow">→</div>
       </div>
       <div class="how-card reveal reveal-delay-3">

@@ -202,20 +202,7 @@
     .btn-ghost:hover { color: var(--white); }
 
     /* Hero stats */
-    .hero-stats {
-      display: flex; gap: 48px; margin-top: 72px; flex-wrap: wrap;
-      padding-top: 48px; border-top: 1px solid var(--border);
-      opacity: 0; animation: fadeUp 0.9s 0.7s forwards;
-    }
-    .stat-item {}
-    .stat-n {
-      font-family: 'ClashDisplay', 'DM Sans', sans-serif; font-weight: 800;
-      font-size: 36px; color: var(--white); letter-spacing: -0.04em; line-height: 1;
-    }
-    .stat-n span { color: var(--purple-light); }
-    .stat-l { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
-
-    @keyframes fadeUp {
+@keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to { opacity: 1; transform: translateY(0); }
     }
@@ -511,8 +498,7 @@
       .hamburger { display: flex; }
       .hero { padding: 120px 20px 80px; }
       .hero h1 { font-size: 42px; }
-      .hero-stats { gap: 32px; }
-      .section-wrap, .spotlight-wrap, .pricing-wrap, .contact-wrap, .blog-wrap, .impressum-wrap { padding-left: 20px; padding-right: 20px; }
+.section-wrap, .spotlight-wrap, .pricing-wrap, .contact-wrap, .blog-wrap, .impressum-wrap { padding-left: 20px; padding-right: 20px; }
       .services-grid { grid-template-columns: 1fr; }
       .service-card { border-right: none !important; }
       .pricing-grid { grid-template-columns: 1fr; }
@@ -574,26 +560,7 @@
     <div class="hero-actions">
       <a href="#kontakt" class="btn-primary">Demo anfragen →</a>
       <a href="#produkt" class="btn-ghost">Erstes Produkt ansehen ↓</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-n">100<span>%</span></div>
-        <div class="stat-l">Vollautomatisiert</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-n">3<span>h</span></div>
-        <div class="stat-l">Zeitersparnis pro Woche</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-n">14</div>
-        <div class="stat-l">Tage kostenlos testen</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-n">48<span>h</span></div>
-        <div class="stat-l">Setup-Zeit</div>
-      </div>
-    </div>
-  </div>
+    </div></div>
 </section>
 
 <!-- TECH PARTNER LOGOS -->
@@ -777,20 +744,20 @@
     <div class="how-grid">
       <div class="how-card reveal reveal-delay-1">
         <div class="how-num">01</div>
-        <h3>Einrichten</h3>
-        <p>Sie teilen uns Ihre Stammgerichte, Ihr Restaurant-Design und Ihre Versandliste mit. Wir richten die Automatisierung einmalig ein — in der Regel innerhalb von 48 Stunden.</p>
+        <h3>Gerichte eintragen</h3>
+        <p>Sie laden Ihre Gerichte einfach selbst hoch oder tragen sie direkt im Dashboard ein — einzeln oder als Liste. Kein technisches Wissen nötig, fertig in wenigen Minuten.</p>
         <div class="how-arrow">→</div>
       </div>
       <div class="how-card reveal reveal-delay-2">
         <div class="how-num">02</div>
-        <h3>KI übernimmt</h3>
-        <p>Jeden Montag generiert die KI automatisch den Wochenplan und erstellt die druckfertige PDF-Speisekarte — passend zu Ihrem Corporate Design.</p>
+        <h3>KI generiert automatisch</h3>
+        <p>Jeden Montag erstellt die KI automatisch den Wochenplan aus Ihren Gerichten — mit Rotationslogik, in Ihrem Corporate Design, als druckfertiges PDF.</p>
         <div class="how-arrow">→</div>
       </div>
       <div class="how-card reveal reveal-delay-3">
         <div class="how-num">03</div>
         <h3>Automatisch versendet</h3>
-        <p>Die fertige Speisekarte wird direkt per WhatsApp oder E-Mail an Ihre Gäste gesendet. Sie müssen nichts tun.</p>
+        <p>Die fertige Speisekarte wird direkt per WhatsApp oder E-Mail an Ihre Gäste gesendet — pünktlich, ohne Ihr Zutun.</p>
       </div>
     </div>
   </div>
